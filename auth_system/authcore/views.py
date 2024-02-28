@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
-from .forms import UserCreationForm, LoginForm
+from .forms import SignupForm, LoginForm
 
 
 def index(request):
@@ -8,12 +8,13 @@ def index(request):
 
 def user_signup(request):
     if request.method == 'POST':
-        form = UserCreationForm(request.POST)
+        form = SignupForm(request.POST)
+        print("valid: ", form.is_valid())
         if form.is_valid():
             form.save()
             return redirect('login')
     else:
-        form = UserCreationForm()
+        form = SignupForm()
     return render(request, 'signup.html', {'form': form})
 
 def user_login(request):
