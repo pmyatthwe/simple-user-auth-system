@@ -1,8 +1,9 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from .forms import SignupForm, LoginForm
+from django.contrib.auth.decorators import login_required
 
-
+@login_required(login_url='login/')
 def index(request):
     return render(request, 'index.html')
 
@@ -34,3 +35,15 @@ def user_login(request):
 def user_logout(request):
     logout(request)
     return redirect('login')
+
+
+# class LoginView(APIView):
+#     def post(self, request):
+#         username = request.data.get('username')
+#         password = request.data.get('password')
+#         user = authenticate(request, username=username, password=password)
+#         refresh = RefreshToken.for_user(user)
+#         return JsonResponse({
+#             'refresh': str(refresh),
+#             'access': str(refresh.access_token)
+#         })
