@@ -6,7 +6,7 @@
 
 First, clone the repository.
 ```
-git clone https://github.com/pmyatthwe/user-auth-system-backend.git
+git clone https://github.com/pmyatthwe/simple-user-auth-system.git
 cd user_auth_system
 ```
 Create a virtual environment to install dependencies in and activate it.
