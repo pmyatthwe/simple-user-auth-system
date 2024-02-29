@@ -6,18 +6,6 @@
     </head>
     <body>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-      <!-- {% if request.user.is_authenticated %}
-        <p>{{ request.user.username }}</p>
-        <a href="{% url 'logout' %}">Logout</a>
-      {% else %}
-        <a href="{% url 'login' %}">Login</a>
-        <a href="{% url 'signup' %}">Signup</a>
-      {% endif %} -->
-
-      <!-- <div class="mb-3">
-
-      </div> -->
-
       <section class="vh-100" style="background-color: #e0e0e0;">
         <div class="container py-5 h-100">
           <div class="row d-flex justify-content-center align-items-center h-100">
@@ -34,15 +22,7 @@
                       <a style="text-decoration: none; color: white" href="{% url 'logout' %}">  Logout                 </a></button>
 
                   {% else %}
-      
 
-                    <!-- <a style="background-color: #3498db; border: none;" class="btn btn-primary btn-lg btn-block" href="{% url 'login' %}" >Login</a>
-                    <a style="background-color: #3498db; border: none;" class="btn btn-primary btn-lg btn-block" href="{% url 'signup' %}" >Singup</a> -->
-
-                    <!-- <button class="btn btn-lg btn-block btn-primary" style="background-color: #dd4b39;"
-                      type="submit"><i class="fab fa-google me-2"></i> Sign in with google</button>
-                    <button class="btn btn-lg btn-block btn-primary mb-2" style="background-color: #3b5998;"
-                      type="submit"><i class="fab fa-facebook-f me-2"></i>Sign in with facebook</button> -->
                   {% endif %}
                 </div>
               </div>
